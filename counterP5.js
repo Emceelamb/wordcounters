@@ -8,6 +8,8 @@ function preload(){
 }
 
 function setup() {
+  createCanvas(400,400);
+  frameRate(12);
 
   // create tokens frome text file
   // joins text into string
@@ -51,5 +53,13 @@ function setup() {
 
 
 function draw(){
+  background(33,20);
 
+  keys.forEach(function(element){
+    fill(230);
+    var x = random(width);
+    var y = random(height);
+    textSize(count[element]*5)
+    text(element, x,y);
+  })
 }
